@@ -1,19 +1,21 @@
 handler:
   staticPrompt:
     candidates:
-    - promptResponse:
-        content:
-          card:
-            image:
-              alt: Frankie
-              url: https://i.ibb.co/J2CqfPx/frankie.png
-            text: Hello Frankie! This is TNR. I was working on the 2022 seasons hackathons
-              list all day. I went out for a meal, but when I returned my laptop was
-              missing!
-            title: Detective Frankie
-        firstSimple:
-          variants:
-          - speech: Hello Frankie! This is TNR. I was working on the 2022 seasons
-              hackathons list all day. I went out for a meal, but when I returned
-              my laptop was missing!
+      - promptResponse:
+          content:
+            card:
+              image:
+                alt: Frankie
+                url: https://i.ibb.co/J2CqfPx/frankie.png
+              text:
+                Hello Frankie! This is TNR. I was working on the 2022 seasons hackathons
+                list all day. I went out for a meal, but when I returned my laptop was
+                missing!
+              title: Detective Frankie
+          firstSimple:
+            variants:
+              - speech:
+                  Hello Frankie! This is TNR. I was working on the 2022 seasons
+                  hackathons list all day. I went out for a meal, but when I returned
+                  my laptop was missing!
 transitionToScene: Start
