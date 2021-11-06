@@ -1,0 +1,23 @@
+synonym:
+  entities:
+    elephant footprints leading towards the door:
+      synonyms:
+      - elephant footprints
+      - footprints
+      - footprints leading to the door
+      - elephant footprints leading towards a door
+    fallen mug:
+      synonyms:
+      - fallen mug
+      - toppled mug
+      - mug
+      - mug spill
+      - mug is falling down
+    open window:
+      synonyms:
+      - open window
+      - window
+      - window is open
+      - window sill
+      - window crack
+  matchType: EXACT_MATCH
