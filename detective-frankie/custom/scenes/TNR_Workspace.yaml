@@ -1,59 +1,64 @@
 conditionalEvents:
-- condition: scene.slots.status == "FINAL" && session.params.ChosenClues == 'elephant
-    footprints leading towards the door'
-  handler:
-    staticPrompt:
-      candidates:
-      - promptResponse:
-          firstSimple:
-            variants:
-            - speech: That seems suspicious!Well,the door leads to my bedroom. Lets
-                go and see.
-  transitionToScene: Bedroom
-- condition: scene.slots.status == "FINAL" && session.params.ChosenClues == 'open
-    window'
-  handler:
-    staticPrompt:
-      candidates:
-      - promptResponse:
-          firstSimple:
-            variants:
-            - speech: That seems normal to me. I love feel some fresh air while working!Try
-                again!
-  transitionToScene: TNR_Workspace
-- condition: scene.slots.status == "FINAL" && session.params.ChosenClues == "fallen
-    mug"
-  handler:
-    staticPrompt:
-      candidates:
-      - promptResponse:
-          firstSimple:
-            variants:
-            - speech: Thats suspicious! Are there any other concrete clues?
-  transitionToScene: TNR_Workspace
+  - condition:
+      scene.slots.status == "FINAL" && session.params.ChosenClues == 'elephant
+      footprints leading towards the door'
+    handler:
+      staticPrompt:
+        candidates:
+          - promptResponse:
+              firstSimple:
+                variants:
+                  - speech:
+                      That seems suspicious!Well,the door leads to my bedroom. Lets
+                      go and see.
+    transitionToScene: Bedroom
+  - condition:
+      scene.slots.status == "FINAL" && session.params.ChosenClues == 'open
+      window'
+    handler:
+      staticPrompt:
+        candidates:
+          - promptResponse:
+              firstSimple:
+                variants:
+                  - speech:
+                      That seems normal to me. I love feel some fresh air while working!Try
+                      again!
+    transitionToScene: TNR_Workspace
+  - condition:
+      scene.slots.status == "FINAL" && session.params.ChosenClues == "fallen
+      mug"
+    handler:
+      staticPrompt:
+        candidates:
+          - promptResponse:
+              firstSimple:
+                variants:
+                  - speech: Thats suspicious! Are there any other concrete clues?
+    transitionToScene: TNR_Workspace
 onEnter:
   staticPrompt:
     candidates:
-    - promptResponse:
-        content:
-          image:
-            alt: TNRs Workspace
-            url: https://i.ibb.co/X5679Lk/Missing-Laptop-3.gif
-        firstSimple:
-          variants:
-          - speech: This is my workspace. Can you see anything out of place?
+      - promptResponse:
+          content:
+            image:
+              alt: TNRs Workspace
+              url: https://i.ibb.co/X5679Lk/Missing-Laptop-3.gif
+          firstSimple:
+            variants:
+              - speech: This is my workspace. Can you see anything out of place?
 slots:
-- commitBehavior:
-    writeSessionParam: ChosenClues
-  name: ChosenClues
-  promptSettings:
-    initialPrompt:
-      staticPrompt:
-        candidates:
-        - promptResponse:
-            firstSimple:
-              variants:
-              - speech: What do you think the clue is?
-  required: true
-  type:
-    name: available_clues
+  - commitBehavior:
+      writeSessionParam: ChosenClues
+    name: ChosenClues
+    promptSettings:
+      initialPrompt:
+        staticPrompt:
+          candidates:
+            - promptResponse:
+                firstSimple:
+                  variants:
+                    - speech: What do you think the clue is?
+    required: true
+    type:
+      name: available_clues

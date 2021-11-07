@@ -1,61 +1,61 @@
 conditionalEvents:
-- condition: scene.slots.status == "FINAL" && session.params.codingAns == 'int'
-  handler:
-    staticPrompt:
-      candidates:
-      - promptResponse:
-          firstSimple:
-            variants:
-            - speech: That does not seem right! Try again!
-  transitionToScene: Coding_Challenge
-- condition: scene.slots.status == "FINAL" && session.params.codingAns == '%d'
-  handler:
-    staticPrompt:
-      candidates:
-      - promptResponse:
-          firstSimple:
-            variants:
-            - speech: That does not seem right! Try again!
-  transitionToScene: Coding_Challenge
-- condition: scene.slots.status == "FINAL" && session.params.codingAns == ';'
-  handler:
-    staticPrompt:
-      candidates:
-      - promptResponse:
-          firstSimple:
-            variants:
-            - speech: Correct!Lets hope Ellie forgives us now.
-  transitionToScene: Finale
+  - condition: scene.slots.status == "FINAL" && session.params.codingAns == 'int'
+    handler:
+      staticPrompt:
+        candidates:
+          - promptResponse:
+              firstSimple:
+                variants:
+                  - speech: That does not seem right! Try again!
+    transitionToScene: Coding_Challenge
+  - condition: scene.slots.status == "FINAL" && session.params.codingAns == '%d'
+    handler:
+      staticPrompt:
+        candidates:
+          - promptResponse:
+              firstSimple:
+                variants:
+                  - speech: That does not seem right! Try again!
+    transitionToScene: Coding_Challenge
+  - condition: scene.slots.status == "FINAL" && session.params.codingAns == ';'
+    handler:
+      staticPrompt:
+        candidates:
+          - promptResponse:
+              firstSimple:
+                variants:
+                  - speech: Correct!Lets hope Ellie forgives us now.
+    transitionToScene: Finale
 onEnter:
   staticPrompt:
     candidates:
-    - promptResponse:
-        content:
-          card:
-            image:
-              alt: Coding Challenge
-              url: https://i.ibb.co/D46QgBW/Missing-Laptop-1.png
-            text: Look closely at the question below
-            title: Identify the syntax error
-        firstSimple:
-          variants:
-          - speech: Lets see what the challenge is!
-        suggestions:
-        - title: Missing Semicolon
-        - title: int not valid
-        - title: d not valid
+      - promptResponse:
+          content:
+            card:
+              image:
+                alt: Coding Challenge
+                url: https://i.ibb.co/D46QgBW/Missing-Laptop-1.png
+              text: Look closely at the question below
+              title: Identify the syntax error
+          firstSimple:
+            variants:
+              - speech: Lets see what the challenge is!
+          suggestions:
+            - title: Missing Semicolon
+            - title: int not valid
+            - title: d not valid
 slots:
-- commitBehavior:
-    writeSessionParam: codingAns
-  name: codingAns
-  promptSettings:
-    initialPrompt:
-      staticPrompt:
-        candidates:
-        - promptResponse:
-            firstSimple:
-              variants:
-              - speech: You picked $session.params.codingAns .
-  required: true
-  type:
-    name: coding_ans
+  - commitBehavior:
+      writeSessionParam: codingAns
+    name: codingAns
+    promptSettings:
+      initialPrompt:
+        staticPrompt:
+          candidates:
+            - promptResponse:
+                firstSimple:
+                  variants:
+                    - speech: You picked $session.params.codingAns .
+    required: true
+    type:
+      name: coding_ans
