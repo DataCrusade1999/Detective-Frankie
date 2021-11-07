@@ -1,0 +1,19 @@
+{
+  "name": "detective-frankie",
+  "version": "1.0.0",
+  "description": "A spy themed game!!",
+  "main": "index.js",
+  "scripts": {
+    "start": "firebase deploy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DataCrusade1999/Detective-Frankie.git"
+  },
+  "author": "Ashutosh,Shaima,Atharav",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DataCrusade1999/Detective-Frankie/issues"
+  },
+  "homepage": "https://github.com/DataCrusade1999/Detective-Frankie#readme"
+}
