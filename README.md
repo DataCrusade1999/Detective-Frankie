@@ -1,5 +1,15 @@
 # Detective-Frankie
 
+## How to run it on your system
+
+- Install [gactions cli](https://developers.google.com/assistant/conversational/quickstart?authuser=0#install_the_gactions_command-line_tool)
+
+- Then add `gactions cli` to your system path.
+
+- Go to [actions console](https://console.actions.google.com/) make a project named `detective-frankie`.
+
+- Fire up your `gactions cli` inside the `sdk` directory then type `gactions push` but before doing all this you might have to authorize yourself first the instruction onscreen will be simple so you should be able to follow it.
+
 ## Inspiration
 
 We wanted to create a detective game on theme with the hackathon. We wanted to add a MLH zest to it. Hence our main characters are Frankie and TNR
