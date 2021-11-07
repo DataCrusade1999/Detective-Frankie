@@ -1,0 +1,60 @@
+conditionalEvents:
+- condition: scene.slots.status == "FINAL" && session.params.ellie == "tidy TNRs bedroom"
+  handler:
+    staticPrompt:
+      candidates:
+      - promptResponse:
+          firstSimple:
+            variants:
+            - speech: Well, That does not bring my laptop back!Try again!
+  transitionToScene: Ellie
+- condition: scene.slots.status == "FINAL" && session.params.ellie == "call ellie"
+  handler:
+    staticPrompt:
+      candidates:
+      - promptResponse:
+          firstSimple:
+            variants:
+            - speech: Ellie seems upset. She feels lonely now that she has nothing
+                to do. She stole my laptop because she was sad.She has promised to
+                give it back if we solve a coding challenge.
+  transitionToScene: Coding_Challenge
+- condition: scene.slots.status == "FINAL" && session.params.ellie == "do nothing"
+  handler:
+    staticPrompt:
+      candidates:
+      - promptResponse:
+          firstSimple:
+            variants:
+            - speech: We have come so far! Please try again!
+  transitionToScene: Ellie
+onEnter:
+  staticPrompt:
+    candidates:
+    - promptResponse:
+        content:
+          image:
+            alt: Ellie
+            url: https://i.ibb.co/C6JtkXV/Ellie-Hackathon.png
+        firstSimple:
+          variants:
+          - speech: We have a couple of options here!
+        suggestions:
+        - title: Call Ellie
+        - title: Tidy TNRs bedroom
+        - title: Do nothing
+slots:
+- commitBehavior:
+    writeSessionParam: ellie
+  name: ellie
+  promptSettings:
+    initialPrompt:
+      staticPrompt:
+        candidates:
+        - promptResponse:
+            firstSimple:
+              variants:
+              - speech: What is your response?
+  required: true
+  type:
+    name: call_ellie

@@ -1,0 +1,10 @@
+defaultLocale: en
+localizedSettings:
+  displayName: Detective Frankie
+  pronunciation: Detective Frankie
+  themeCustomization:
+    backgroundColor: '#FAFAFA'
+    imageCornerStyle: CURVED
+    primaryColor: '#101010'
+  voice: male_1
+projectId: actions-codelab-72f15
