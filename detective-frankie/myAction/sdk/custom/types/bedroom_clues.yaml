@@ -1,0 +1,10 @@
+synonym:
+  entities:
+    frankies picture:
+      synonyms:
+        - frankie's picture is torn
+        - ellie everywhere
+        - ellie swags
+        - ellie
+        - frankie
+  matchType: EXACT_MATCH
