@@ -2,6 +2,15 @@
     position: relative;
     justify-content: center;
     max-width: 100%;
-    max-height: auto;
+    height: auto;
+}
+
+.card{
+    width: 70%;
+    position: relative;
+    margin: auto;
+    justify-content: center;
+    top: 20px;
+    bottom: 20px;
 }
 
