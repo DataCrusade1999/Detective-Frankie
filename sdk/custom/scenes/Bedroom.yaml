@@ -1,56 +1,55 @@
 conditionalEvents:
-- condition: scene.slots.status == "FINAL" && session.params.bedroomClue == 'frankies
-    picture'
-  handler:
-    staticPrompt:
-      candidates:
-      - promptResponse:
-          firstSimple:
-            variants:
-            - speech: Wow! Yes why is frankies picture torn? I didnt have so may Ellie
-                swags in my bedroom before!!
-  transitionToScene: Ellie
-- condition: scene.slots.status == "FINAL" && session.params.bedroomClue != "frankies
-    picture"
-  handler:
-    staticPrompt:
-      candidates:
-      - promptResponse:
-          content:
-            card:
-              text: Card Content
-              title: Card Title
-          firstSimple:
-            variants:
-            - speech: That is not out of place!Try again!
-  transitionToScene: Bedroom
+  - condition:
+      scene.slots.status == "FINAL" && session.params.bedroomClue == 'frankies
+      picture'
+    handler:
+      staticPrompt:
+        candidates:
+          - promptResponse:
+              firstSimple:
+                variants:
+                  - speech:
+                      Wow! Yes why is frankies picture torn? I didnt have so may Ellie
+                      swags in my bedroom before!!
+    transitionToScene: Ellie
+  - condition:
+      scene.slots.status == "FINAL" && session.params.bedroomClue != "frankies
+      picture"
+    handler:
+      staticPrompt:
+        candidates:
+          - promptResponse:
+              firstSimple:
+                variants:
+                  - speech: That is not out of place!Try again!
+    transitionToScene: Bedroom
 onEnter:
   staticPrompt:
     candidates:
-    - promptResponse:
-        content:
-          image:
-            alt: TNRs bedroom
-            url: https://i.ibb.co/2M27g2Y/Missing-Laptop.png
-        firstSimple:
-          variants:
-          - speech: Here is my bedroom!
+      - promptResponse:
+          content:
+            image:
+              alt: TNRs bedroom
+              url: https://i.ibb.co/2M27g2Y/Missing-Laptop.png
+          firstSimple:
+            variants:
+              - speech: Here is my bedroom!
 slots:
-- commitBehavior:
-    writeSessionParam: bedroomClue
-  name: bedroomClue
-  promptSettings:
-    initialPrompt:
-      staticPrompt:
-        candidates:
-        - promptResponse:
-            content:
-              image:
-                alt: TNRs bedroom
-                url: https://i.ibb.co/2M27g2Y/Missing-Laptop.png
-            firstSimple:
-              variants:
-              - speech: What do you think happened here?
-  required: true
-  type:
-    name: bedroom_clues
+  - commitBehavior:
+      writeSessionParam: bedroomClue
+    name: bedroomClue
+    promptSettings:
+      initialPrompt:
+        staticPrompt:
+          candidates:
+            - promptResponse:
+                content:
+                  image:
+                    alt: TNRs bedroom
+                    url: https://i.ibb.co/2M27g2Y/Missing-Laptop.png
+                firstSimple:
+                  variants:
+                    - speech: What do you think happened here?
+    required: true
+    type:
+      name: bedroom_clues
