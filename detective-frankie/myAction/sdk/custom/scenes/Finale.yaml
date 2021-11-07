@@ -1,9 +1,0 @@
-onEnter:
-  staticPrompt:
-    candidates:
-    - promptResponse:
-        firstSimple:
-          variants:
-          - speech: Thank you for helping Frankie! Ellie has returned my laptop back.She
-              has decided to attend hackathons from now on to keep herself busy.Thank
-              you again Detective Frankie!See you later!
