@@ -1,0 +1,20 @@
+synonym:
+  entities:
+    call ellie:
+      synonyms:
+      - call ellie
+      - ellie
+      - ask ellie
+      - go to ellie
+    do nothing:
+      synonyms:
+      - do nothing
+      - dont do anything
+      - stay there
+      - nothing to be done
+    tidy TNRs bedroom:
+      synonyms:
+      - tidy TNRs bedroom
+      - TNRs bedroom
+      - clean TNRs bedroom
+  matchType: EXACT_MATCH
