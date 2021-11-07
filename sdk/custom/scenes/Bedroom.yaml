@@ -1,6 +1,6 @@
 conditionalEvents:
-- condition: scene.slots.status == "FINAL" && (scene.slots.status == Final && session.params.bedroomClue
-    == 'frankies picture')
+- condition: scene.slots.status == "FINAL" && session.params.bedroomClue == 'frankies
+    picture'
   handler:
     staticPrompt:
       candidates:
@@ -30,8 +30,11 @@ onEnter:
     - promptResponse:
         content:
           image:
-            alt: Google Assistant logo
-            url: https://developers.google.com/assistant/assistant_96.png
+            alt: TNRs bedroom
+            url: https://i.ibb.co/2M27g2Y/Missing-Laptop.png
+        firstSimple:
+          variants:
+          - speech: Here is my bedroom!
 slots:
 - commitBehavior:
     writeSessionParam: bedroomClue
@@ -42,12 +45,12 @@ slots:
         candidates:
         - promptResponse:
             content:
-              card:
-                text: Card Content
-                title: Card Title
+              image:
+                alt: TNRs bedroom
+                url: https://i.ibb.co/2M27g2Y/Missing-Laptop.png
             firstSimple:
               variants:
-              - speech: What do you think happened here!
+              - speech: What do you think happened here?
   required: true
   type:
     name: bedroom_clues
