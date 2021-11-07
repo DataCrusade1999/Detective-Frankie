@@ -29,16 +29,16 @@ conditionalEvents:
       - promptResponse:
           firstSimple:
             variants:
-            - speech: Umm! I accidentally hit the mug when I realised that my laptop
-                was missing!Try again!
+            - speech: Thats suspicious! Are there any other concrete clues?
   transitionToScene: TNR_Workspace
 onEnter:
   staticPrompt:
     candidates:
     - promptResponse:
         content:
-          card:
-            title: TNRs workspace
+          image:
+            alt: TNRs Workspace
+            url: https://i.ibb.co/X5679Lk/Missing-Laptop-3.gif
         firstSimple:
           variants:
           - speech: This is my workspace. Can you see anything out of place?
