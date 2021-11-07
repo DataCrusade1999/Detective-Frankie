@@ -1,0 +1,20 @@
+synonym:
+  entities:
+    '%d':
+      synonyms:
+      - '%d'
+      - d
+      - format specifier
+    ;:
+      synonyms:
+      - ;
+      - semicolon
+      - ending semicolon
+      - semi-colon
+      - end semicolon
+    int:
+      synonyms:
+      - int
+      - integer data type
+      - data-type
+  matchType: EXACT_MATCH
